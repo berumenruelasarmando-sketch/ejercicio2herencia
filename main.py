@@ -1,22 +1,6 @@
-from figuras.Circulo import Circulo
-from figuras.Triangulo import Triangulo
-
+from menu.principal import menuPrincipal
 def main():
-    
-    print("\n********Circulo***********")
-    c = Circulo()
-    c.leerDatosCirculo()
-    
-    print("\n*******************")
-    c.mostrarDatosCirculo()
-
-    print("\n********Triangulo***********")
-    t = Triangulo()
-    t.leerDatosTriangulo()
-    
-    print("\n*******************")
-    t.mostrarDatosTriangulo()
-
+    menuPrincipal()
 
 if __name__ == "__main__":
-    main()
+    menuPrincipal()

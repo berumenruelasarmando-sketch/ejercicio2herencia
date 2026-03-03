@@ -1,29 +1,36 @@
-from figuras.circulo import Circulo
-from figuras.triangulo import Triangulo
+from figuras.Circulo import Circulo
+from figuras.Triangulo import Triangulo
 
-def menuFiguras():
+def menuPrincipal():
     while True:
-        print("\n:: Menú de Figuras ::")
+        print("\n:---- Menú de Figuras-----")
         print("1. Círculo")
         print("2. Triángulo")
         print("3. Salir")
-        opcion = input("Ingrese la figura: ")
-
-        if opcion == "1" or opcion.lower() == "círculo":
-            c = Circulo()
-            c.leerDatosCirculo()
-            print("\n--- Datos del Círculo ---")
-            c.mostrarDatosCirculo()
-
-        elif opcion == "2" or opcion.lower() == "triángulo":
-            t = Triangulo()
-            t.leerDatosTriangulo()
-            print("\n--- Datos del Triángulo ---")
-            t.mostrarDatosTriangulo()
-
-        elif opcion == "3" or opcion.lower() == "salir":
-            print("Saliendo del menú...")
-            break
-
-        else:
-            print("Opción inválida, intente de nuevo.")
+        
+        op= int(input("Elejir opcion: "))
+        print()
+        
+        match(op):
+            case 1:
+                c = Circulo()
+                c.leerDatosFiguras()
+                c.leerDatosCirculo()
+                c.mostrarDatosCirculo()
+                print("Circulo creado")
+                
+            case 2:
+                t = Triangulo()
+                t.leerDatosFiguras()
+                t.leerDatosTriangulo()
+                t.mostrarDatosTriangulo()
+                print("triangulo creado")
+            
+            case 3:
+                print("Adios")
+                break
+            
+            case _:
+                print("Opcion invalida")
+if __name__ == "__main__":
+    menuPrincipal()
